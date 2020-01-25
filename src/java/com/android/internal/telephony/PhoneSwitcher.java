@@ -635,7 +635,7 @@ public class PhoneSwitcher extends Handler {
         return false;
     }
 
-    private boolean isInEmergencyCallbackMode() {
+    protected boolean isInEmergencyCallbackMode() {
         for (Phone p : mPhones) {
             if (p == null) continue;
             if (p.isInEcm()) return true;
@@ -1004,7 +1004,7 @@ public class PhoneSwitcher extends Handler {
         return getSubIdFromNetworkSpecifier(specifier);
     }
 
-    private int getSubIdFromNetworkSpecifier(NetworkSpecifier specifier) {
+    protected int getSubIdFromNetworkSpecifier(NetworkSpecifier specifier) {
         if (specifier == null) {
             return DEFAULT_SUBSCRIPTION_ID;
         }

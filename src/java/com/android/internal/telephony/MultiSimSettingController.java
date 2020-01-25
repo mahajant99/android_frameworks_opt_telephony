@@ -649,7 +649,7 @@ public class MultiSimSettingController extends Handler {
     }
 
     protected void disableDataForNonDefaultNonOpportunisticSubscriptions() {
-        if (!mSubInfoInitialized) return;
+        if (!isReadyToReevaluate()) return;
 
         int defaultDataSub = mSubController.getDefaultDataSubId();
 
